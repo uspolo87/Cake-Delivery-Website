@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to Cake Lounge -LPU</title>
+
+<meta charset="utf-8">
+<meta name="distribution" content="global"/>
+	<meta name="copyright" content="CakeDelivary is copyright 2005-2020"/>
+	<meta name="rating" content="General"/>
+	<meta name="language" content="En"/>
+	<meta name="robots" content="all"/>
+	<meta name="revisit-after" content="1 days">
+	<meta name="author" content="Cake Delivary"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="logo_black.png"  type="image/x-icon">
+
+<style>
+
+input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[type=text] {
+    width: 330px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+ 
+    
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+
+    margin-left: 420px;
+    margin-top: 55px;
+
+}
+input[type=submit] {
+
+background-image: url();
+    background-position: -6px -5px; 
+
+padding: 15px 12px;
+background-size: cover;
+background-repeat: no-repeat;
+margin-left: -5px;
+
+	}
+	a{
+
+
+		text-decoration: none;
+		color: white;
+		padding: 10px;
+	}
+
+#cakes{
+
+
+	float: left;
+	margin:25px;
+	padding: -2px;
+}
+	
+
+	li{
+
+		text-decoration: none;
+		padding:25px 35px;
+		border-bottom: 3px solid #e9e9e9;
+		margin-left: 15px;
+		display:inline-block;  	
+cursor: pointer;
+color: #484848;
+
+	}
+	.banner{
+		    font: 700 14px/12px Arial, Helvetica, sans-serif;
+		color: #fff;
+    background: #f13340;
+    text-transform: uppercase;
+    padding: 9px 0 7px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.24);
+    width: 130px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    margin-left: 195px;
+   margin-top: -250px;
+    z-index: 1;
+    transform: rotate(45deg);
+	}
+
+	#cakes:hover{
+
+box-shadow: 4px 4px 4px 4px grey;
+transition: 0.4s;
+
+}
+#review{
+
+
+	font-size: 18px;
+	font-family: Comic Sans MS;
+	display: inline-block;
+	margin: 5px;
+  border-radius: 15px;
+	float:right;
+background: #42275a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+padding: 15px;
+	color: lightblue;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    
+}
+
+.heading {
+    font-size: 25px;
+    margin-right: 25px;
+}
+
+.fa {
+    font-size: 25px;
+}
+
+.checked {
+    color: orange;
+}
+
+/* Three column layout */
+.side {
+    float: left;
+    width: 15%;
+    margin-top: 10px;
+}
+
+.middle {
+    float: left;
+    width: 70%;
+    margin-top: 10px;
+}
+
+/* Place text to the right */
+.right {
+    text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The bar container */
+.bar-container {
+    width: 50%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 20%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 10%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 5%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 2%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 1%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+    .side, .middle {
+        width: 100%;
+    }
+    /* Hide the right column on small screens */
+    .right {
+        display: none;
+    }
+}
+
+#clr{
+
+	color: black;
+
+}
+
+
+.footer1{
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: slateblue;
+   color: white;
+   text-align: center;
+}
+
+.modal {
+    display:  /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+
+
+
+} 
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+
+
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+.modal-footer img:hover{
+ 
+  background-color: #5cb85c;
+}
+
+
+#snowflakeContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.snowflake {
+    padding-left: 15px;
+    font-family: Cambria, Georgia, serif;
+    font-size: 14px;
+    line-height: 24px;
+    position: fixed;
+    color: #FFFFFF;
+    user-select: none;
+    z-index: 1000;
+}
+.snowflake:hover {
+    cursor: default;
+}
+
+
+
+</style>
+
+</head>
+<body>
+<div id="fixed">
+<h1 style="font-size: 45px; text-align: center;padding: 15px;  text-indent: 2px; background-color: rgb(153,50,51); color: white; margin-top: -8px; ">FOR INSTANT DELIVARY CALL &  <img src="images.png" width="40" height="40"> Naveen(9100639628)</h1>
+
+</div>
+
+<p style="font-size: 15px; background-color: #333; color: white; margin-top: -30px; widows: auto; padding: 8px;"><span style="color:grey;">Call us now:</span> <span>Customer Support : 9779022133,9100639628</span></p>
+
+<h4  style="float: right; margin-top: 50px; display: inline-block; background-color: #45b97c; color: #fff;  margin-right: 150px; font-size: 29px; padding: 10px;">Upcoming Events</h4>
+
+
+<div style="float: right; margin: 5px;  margin-top: -43px; padding: -5px; font-size: 20px; margin-right: -250px;  color: white;">
+<span><a href="aboutus.htm"> About Us</a></span>
+
+<span><a href="contactus.htm"> Contact Us</a></span>
+</div>
+
+
+<form method="post">
+	<input type="text" name="search" placeholder="Search..">
+<input type="submit" name="search" value="Search..." >
+</form>
+
+<h1 style="margin-left: 55px; margin-top: -120px;"> <a href="cakeorder(homepage).htm"> <img src="log0.png" width="200" height="200" title="CakeLounge" ></h1></a>
+
+
+
+<div id="nav">
+
+<ul style="margin-left: 85px; margin-top: -45px; background-color: #fff;">	
+<li>CAKE</li>
+<li>FLOWERS</li>
+<li>COMBO</li>
+<li>4 HOURS DELIVARY</li>
+<li>	OCASSIONS</li>
+<li>ADD ONS</li>
+
+</ul>
+
+</div>
+
+
+
+<div style="margin-left: 85px;">
+<img src="mainimg.png" width="750" height="450">
+</div>
+<div id="slideshow" style="float: right; margin-top: -450px; margin-right: 95px;" >	<img src="delivary.jpg">
+	<br>
+	<img src="midnight.jpg">
+	
+
+</div>
+<br>
+
+<div>
+<ul>
+	
+<li id="upcomingevents" style="font-size: 30px; border-right: 2px solid grey; background-color: coral;">Upcoming Events</li>
+
+<li style="color: mediumslateblue; font-size: 20px; border-right: 2px solid grey; font-weight: bold;">New Year 01-01-2018</li>
+<li style="color: red; font-size: 20px; border-right: 2px solid red; font-weight: bold;">Pongal Festival 13-01-2018</li>
+<li style="color: greenyellow; font-size: 20px; border-right: 2px solid grey;">Republic Day 26-01-2018</li>
+
+</ul>
+</div>
+<br>
+
+
+<div id="backgroundimage">
+<div id="cakes" style="border:1px solid grey; text-align: center; font-family: sans-serif; padding: -2px;">
+<a href="blackforest.htm"><img src="black-forest-fantasy-cake.jpg"></a><br>
+<span class="banner">Sale</span>
+<br><br>
+<div>Black Forest Fantasy Cake</div>
+<br>
+<br>
+
+</div>
+<div id="cakes" style="border:1px solid grey; text-align: center; font-family: sans-serif; padding: -2px;">
+
+
+<a href="butterscotch.htm"  ><img src="butter-scotch-cake.jpg"></a><br>
+<span class="banner">Sale</span>
+<br><br>
+<div> Butter Scotch Cake</div>
+<br>
+<br>
+ </div>
+ <div id="cakes" style="border:1px solid grey; text-align: center; font-family: sans-serif; padding: -2px;">
+
+ <a href=" almond.htm"> <img src="choco-almond-cake.jpg"></a>
+ <br><br><br>
+<div>Choco Almond Cake</div>
+<br>
+<br>
+
+</div>
+<div id="cakes" style="border:1px solid grey; background-color:transparent; text-align: center; font-family: sans-serif; padding: -2px; ">
+
+
+<a href="pineapple.htm"><img src="pineapple-cake.jpg"></a><br><br><br><br><br>
+<div> Pineapple Cake</div>
+</div>
+</div>
+
+
+
+<ul style="margin-left: 100px; font-size: 16px; padding: 15px; margin: 15px;">
+	
+<li>₹ 299.00 &nbsp &nbsp &nbsp <strike>₹399</strike> </li>
+<li style="margin-left: 150px;">₹ 299.00  &nbsp &nbsp &nbsp <strike>₹399</strike></li>
+<li style="margin-left: 130px;">₹ 299.00 &nbsp &nbsp &nbsp <strike>₹399</strike></li>
+<li style="margin-left: 150px;">₹ 299.00 &nbsp &nbsp &nbsp <strike>₹399</strike></li>
+
+
+</ul>
+
+
+
+<div id="backgroundimage">
+<div id="cakes" style="border:1px solid grey; text-align: center; font-family: sans-serif; padding: -2px;">
+<a href="oreocake.htm"><img src="black-forest-oreo-cake.jpg"></a><br>
+<span class="banner">Sale</span>
+<br><br>
+<div>Black Forest Oreo Cake</div>
+<br>
+<br>
+
+</div>
+<div id="cakes" style="border:1px solid grey; text-align: center; font-family: sans-serif; padding: -2px;">
+
+
+<a href="butterscotch.htm"  ><img src="cake-and-cadbury-celebrations-combo.jpg"></a><br>
+
+<br><br>
+<div> Cake and Cadbury Celebrationes Combo</div>
+<br>
+<br>
+ </div>
+ <div id="cakes" style="border:1px solid grey; text-align: center; font-family: sans-serif; padding: -2px;">
+
+ <a href=" turfle.htm"> <img src="chocolate-truffle-cake.jpg"></a>
+ <br><br><br>
+<div>Chocolate Truffle Cake</div>
+<br>
+<br>
+
+</div>
+<div id="cakes" style="border:1px solid grey; background-color:transparent; text-align: center; font-family: sans-serif; padding: -2px; ">
+
+
+<a href="doraemon.htm"><img src="doraemon-face-cake.jpg"></a><br><br><br>
+<div> Doraemon Face Cake</div>
+<br><br><br>
+
+</div>
+<ul style="margin-left: 100px; font-size: 16px; padding: 15px; margin: 15px;">
+	
+<li>₹ 299.00 &nbsp &nbsp &nbsp <strike>₹399</strike> </li>
+<li style="margin-left: 150px;">₹ 299.00  &nbsp &nbsp &nbsp <strike>₹399</strike></li>
+<li style="margin-left: 130px;">₹ 299.00 &nbsp &nbsp &nbsp <strike>₹399</strike></li>
+<li style="margin-left: 150px;">₹ 299.00 &nbsp &nbsp &nbsp <strike>₹399</strike></li>
+
+
+</ul>
+<div id="snowflakeContainer">
+    <p class="snowflake">*</p>
+</div>
+<br><br>
+<div>
+<h1 id="review"  ><a href="other.htm"></a>  Others Reviews</h1>
+<h1 id="review" > <a href="review.htm" style="color: #ff7e5f; " > Write a Review</a></h1>
+
+</div>
+
+
+</div>
+
+<br>
+<br>
+
+<h1 style="margin-top: -5px; font-size: 30px; color: #44A08D;   "   >Give Us a Rate -- </h1>
+
+<form style="margin-left: 295px; margin-top: -54px;  " >
+  
+  1<input type="checkbox"  checked="check"  name="1star" style="width: 25px; height: 25px;" >
+  2<input type="checkbox" name="2star" style="width: 25px; height: 25px;" >
+  3<input type="checkbox" name="3star" style="width: 25px; height: 25px;" >
+  4<input type="checkbox" name="4star" style="width: 25px; height: 25px;" >
+  5<input type="checkbox" name="5star" style="width: 25px; height: 25px;" >
+  
+
+
+
+</form>
+
+<button style="border:none; padding: 8px 8px;margin-left: 550px; margin-top:-30px;   font-size: 20px; background-color: background: #44A08D;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ " >Submit</button>
+
+
+
+
+<br>
+<br>
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<span class="heading" id="clr" style="color: #44A08D;" >  User Rating</span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<p style="color: #44A08D;" >Be the Frist to Review</p>
+<hr style="border:3px solid #f1f1f1">
+
+<div class="row">
+  <div class="side">
+    <div id="clr" >5 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div id="clr">10</div>
+  </div>
+  <div class="side">
+    <div id="clr" >4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div id="clr">8</div>
+  </div>
+  <div class="side">
+    <div id="clr" >3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div id="clr" >6</div>
+  </div>
+  <div class="side">
+    <div id="clr" >2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div id="clr" >5</div>
+  </div>
+  <div class="side">
+    <div id="clr">1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div id="clr">1</div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<br><br><br><br>
+<footer style="background-color: #333;" >
+  <br>
+
+<h1 style="margin-left: 300px;color: white; " > Be The Frist to know About our new products</h1>
+<br>
+<br>
+<form style="margin-left: 500px;" >
+  
+  <input type="email" name="mail" placeholder="Enter Your e-mail" style="padding: 7px 7px; width: 250px; height: 40px; border-radius: 12px; "  >
+  <button name="submit" style="padding: 9px 9px;border-radius: 12px; " >Subscribe</button>
+
+</form>
+<br>
+<br>
+
+<ul style="margin-left: 300px;" >
+  
+  <li style="color: white;" >Search</li>
+  <li style="color: white;">About Us</li>
+  <li style="color: white;" >Contact Us</li>
+  <li style="color: white;"  >Work with Us</li>
+</ul>
+
+
+<br>
+<br>
+<br>
+
+<div id="copyright" style="float: right; margin-right: 200px; " >
+  
+  <p style="color: lightgreen;" >&copy2018 <a href="cakelounge.htm"> <span style="color: #fff; margin-left:-10px; "  >Cake Lounge</span></a> </p>
+
+
+</div>
+
+<br>
+
+<div id="social-icons" style="margin-left: 90px;" >
+<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.facebook.com%2Flputrolls1%2Fnotifications%2F&layout=button&size=small&mobile_iframe=true&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden;  margin-top:-2px; " scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+  
+  <img src="insta.png" width="25" height="25"  alt="facebook" >
+  <img src="twitter.png"  width="25" height="25" alt="facebook" >
+  
+
+
+</div>
+
+  
+
+</footer>
+
+
+  
+
+</body>
+</html>

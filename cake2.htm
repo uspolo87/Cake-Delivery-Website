@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cake - delivary</title>
+
+
+	<style type="text/css">
+		
+ body{
+ 	margin-top: 25px;
+ 	color: white;
+background-image: url(1.jpg);
+background-repeat: repeat-y;
+background-size: cover;
+ 	background-color: slateblue;
+ 	margin: auto;
+ 	font-size: 25px;
+ }
+ h1{
+
+
+font-size: 55px;
+font-family: sans-serif;
+line-height: 15px;
+margin-left: 130px;
+margin-top: 55px;
+color: orange;
+
+
+ }
+
+ input[type=text],input[type=date],input[type=number]{
+
+
+width: 250px;
+
+height: 25px;
+border-radius: 15px;
+padding: 8px;
+
+font-size: 20px;
+
+
+ }
+
+ input[type=submit]{
+
+
+ 	border-style: none;
+ 	padding: 10px;
+ 	border-radius: 15px;
+ 	color: slateblue;
+ 	font-weight: bold;
+ box-shadow: 2px grey;
+
+ margin-left: 200px;
+ }
+ 
+ option{
+
+ 	border-radius: 35px;
+ 	border-radius: 5px;
+ 	border-color: black;
+ }
+ option{
+
+
+ 	line-height: 15px;
+ }
+
+input#thing1[type=checkbox] + label
+{
+background-image: url(9.jpg);
+border-color: white;
+border-style: solid;
+height: 150px;
+width: 150px;
+display:inline-block;
+padding: 0 0 0 0px;
+}
+	</style>
+</head>
+<body>
+
+<h1>Cake - Order</h1>
+
+
+
+
+
+
+<div id="frm" style="margin-left:100px; margin-top: 85px; ">
+
+
+<form action="cakeorder.php" method="post">
+Name
+<input type="text" style="margin-left:120px;" name="username" required="required">
+<br><br>
+Name on the cake
+<input type="text" name="bdname" required="required">
+<br><br>
+Contact No
+<input type="number" name="contactno" style="margin-left:70px;" required="required">
+<br><br>
+Birthday Date
+<input type="date" name="bddate" style="margin-left:45px; font-family: sans-serif;" required="required">
+<br><br>
+
+<input type="checkbox" name='thing1' id="thing1"/><label for="thing1"></label> 
+<input type="checkbox" name='thing2' id="thing2"/><label for="thing2"></label> 
+<input type="checkbox" name='thing3' id="thing3"/><label for="thing3"></label> 
+<input type="checkbox" name='thing4' id="thing4"/><label for="thing4"></label> 
+
+
+<br><br>
+Hostel
+<input type="text" name="hostelno"  style="margin-left:120px;" required="required">
+<br><br>
+ Comments
+<input type="text" name="cmmnts" maxlength="300"  style="margin-left:80px; required="required">
+<br><br>
+<input type="submit" name="submit" value="Submit Your Details">
+</form>
+</div>
+
+
+<img src="free_delivery.gif" style="float: right; margin-top: -120px; margin-right: 15px; width: 250px; height: auto; font-weight: bold;">
+</body>
+</html>

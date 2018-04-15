@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cake - delivary</title>
+
+
+
+
+<script type="text/javascript">
+	
+	function function1() {
+		
+	
+var id = document.frm.rfid;
+var bdname = document.frm.bdname;
+var contact = document.frm.contactno;
+var name = document.frm.username;
+var bdate = document.frm.bdate;
+var hostel = document.frm.hostelno;
+
+
+
+ if(name.value == "")
+
+window.alert("Please enter Your Name")
+
+}
+ if (contact.value == "") {
+
+
+	window.alert("Please provide a Your contact Number")
+}
+
+
+ if (bdname.value == "") {
+
+
+	window.alert("Please provide a Name to be on Cake ")
+}
+
+
+ if (bdate.value == "") {
+
+
+	window.alert("Please provide Birthday Date")
+}
+
+ if (hostel.value == "") {
+
+
+	window.alert("Please provide Your Hotel Number")
+}
+
+if (id.value != "1605")
+{
+    window.alert("Please provide a detailed description or comment.");
+
+
+	
+}
+
+
+else
+{
+
+window.alert("Please fill out this form to order")
+
+}
+</script>
+
+
+	<style type="text/css">
+		
+ body{
+ 	margin-top: 25px;
+ 	color: white;
+background-image: url(1.jpg);
+background-repeat: repeat-y;
+background-size: cover;
+ 	background-color: slateblue;
+ 	margin: auto;
+ 	font-size: 25px;
+ }
+ h1{
+
+
+font-size: 55px;
+font-family: sans-serif;
+line-height: 15px;
+margin-left: 130px;
+margin-top: 55px;
+color: orange;
+
+
+ }
+
+ input[type=text],input[type=date],input[type=number]{
+
+
+width: 250px;
+
+height: 25px;
+border-radius: 15px;
+padding: 8px;
+
+font-size: 20px;
+
+
+ }
+
+ input[type=submit]{
+
+
+ 	border-style: none;
+ 	padding: 10px;
+ 	border-radius: 15px;
+ 	color: slateblue;
+ 	font-weight: bold;
+ box-shadow: 2px grey;
+
+ margin-left: 200px;
+ }
+ 
+ option{
+
+ 	border-radius: 35px;
+ 	border-radius: 5px;
+ 	border-color: black;
+ }
+ option{
+
+
+ 	line-height: 15px;
+ }
+
+
+	</style>
+</head>
+<body>
+
+<h1>Cake - Order</h1>
+
+<div  style="float: right; margin-top: -15px; margin-right: 155px;"   > 
+
+<h2>REF ID - 1605</h2>
+<img src="black-forest-oreo-cake.jpg" width="350"   height="350">
+
+</div>
+<div id="frm" style="margin-left:100px; margin-top: 85px; ">
+
+
+<form  name="frm"  method="post">
+Name
+<input type="text" style="margin-left:120px;" name="username" >
+<br><br>
+Name on the cake
+<input type="text" name="bdname" >
+<br><br>
+Contact No
+<input type="number" name="contactno" style="margin-left:70px;" >
+<br><br>
+Birthday Date
+<input type="text" name="bddate" style="margin-left:45px; font-family: sans-serif;" >
+<br><br>
+
+<span style="margin-left: -50px;">  Product Reference 
+ID </span><input  type="text" name="rfid" id="id" placeholder="Enter The Product Ref Id.." style="margin-left: 15px;">
+
+
+
+<br><br>
+Hostel
+<input type="text" name="hostelno"  style="margin-left:120px;" >
+<br><br>
+ Comments
+<input type="text" name="cmmnts" maxlength="300"  style="margin-left:80px;">
+<br><br>
+<input type="submit" name="submit" onclick="function1()" value="Submit Your Details">
+</form>
+</div>
+
+
+
+<img src="free_delivery.gif" style="float: right; margin-top: -135px; margin-right: 15px; width: 250px; height: auto; font-weight: bold;">
+
+
+
+
+</body>
+</html>

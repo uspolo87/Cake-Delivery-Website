@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Review for us</title>
+
+<style type="text/css">
+
+body{
+
+	background-color: #3498db;
+	background-size: cover;
+}
+	
+input[type=text]{
+
+
+padding: 15px 15px;
+width: 350px;
+height: 10px;
+border-radius: 15px;
+border-style: solid 5px lightblue;
+box-shadow: 2px 2px 2px;
+
+
+}
+
+input[type=mail]
+{
+
+	padding: 15px 15px;
+width: 350px;
+height: 10px;
+border-radius: 15px;
+border-style: solid 2px lightblue;
+box-shadow: 2px 2px 2px;
+
+}
+
+select{
+
+	width: 300px;
+	height: 30px;
+
+}
+
+option{
+
+
+	font-size: 30px;
+}
+
+span{
+
+
+	font-size: 25px;
+}
+
+h1{
+
+	font-size: 55px;
+	font-family:Segoe Print;
+}
+form{
+
+	margin: 90px;
+	margin-top: 0px;
+}
+input[type=submit]
+{
+
+	padding: 15px 45px;
+	background-color:#a29bfe;
+	box-shadow: 2px 2px 2px 2px;
+	border: none;
+	margin-top: 15px;
+	margin-left: 100px;
+border-radius: 65px;
+}
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+	<img src="feedback2.png" width="300"  style="margin-top: -35px; border-radius: 35px; "  height="160" align="right" >
+
+<h1 align="center" >Cake Lounge</h1>
+
+
+<br>
+<br>
+<br>
+
+<form action="feedback.php" >
+	
+
+<span style="margin-left: 20px;" >Name:</span>&nbsp<input type="text" name="name" placeholder="Enter Your Name" required="required" />
+
+<br>
+<br>
+<br>
+<span style="margin-left: 20px;" >e-mail:</span>&nbsp<input type="mail" name="mail" placeholder="Enter Your e-mail"  required="required" />
+<br>
+<br>
+<br>
+<span style="margin-left: -59px;" >Review about : </span><select>
+	<option>Select</option>
+<option value="Cakes" >Cakes</option>
+<option value="delivary" >Delivary</option>
+<option value="service" >Service</option>
+<option value="price" >Price</option>
+
+</select>
+<br>
+<br>
+<br>
+<span>Message:</span>&nbsp<input type="text" name="message" placeholder="Write Here" required="required"  maxlength="1000" />
+<br>
+<br>
+<input type="submit" name="submit" value="Submit" />
+
+
+</form>
+</body>
+</html>
